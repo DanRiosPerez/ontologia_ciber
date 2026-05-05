@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad/"
+     xml:base="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ciberseguridad="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#afecta -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#afecta">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#afectado_por"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Amenaza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Activo"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#afectado_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#afectado_por">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Activo"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Amenaza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#mitiga -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#mitiga">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#mitigado_por"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Control"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Amenaza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#mitigado_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#mitigado_por">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Amenaza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Control"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#requerido_por -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#requerido_por">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#requiere"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Control"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Politica"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#requiere -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#requiere">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Politica"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Control"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#criticidad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#criticidad">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Activo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#fechaDeteccion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#fechaDeteccion">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Vulnerabilidad"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#nivelDeRiesgo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#nivelDeRiesgo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Amenaza"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Activo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Activo">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#afectado_por"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Amenaza"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Amenaza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Amenaza">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#afecta"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Activo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#mitigado_por"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Control"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Antivirus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Antivirus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Vulnerabilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Autenticacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Autenticacion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Control"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Backups -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Backups">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Politica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Base_de_datos -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Base_de_datos">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Activo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Computadora -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Computadora">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Activo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Control -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Control">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#mitiga"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Amenaza"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#requerido_por"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Politica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#DDoS -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#DDoS">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Amenaza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Inputs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Inputs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Vulnerabilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Malware -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Malware">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Amenaza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Phishing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Phishing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Amenaza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Politica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Politica">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#requiere"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Control"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Sanitizacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Sanitizacion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Politica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Seguridad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Seguridad">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Control"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Servidor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Servidor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Activo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Usuarios -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Usuarios">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Vulnerabilidad"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Validacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Validacion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Control"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Verificacion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Verificacion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Politica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Vulnerabilidad -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Vulnerabilidad"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#antivirus_desactualizados -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#antivirus_desactualizados">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Antivirus"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#ataque_ddos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#ataque_ddos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#DDoS"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#backups_periodicos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#backups_periodicos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Backups"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#base_datos_ventas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#base_datos_ventas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Base_de_datos"/>
+        <ciberseguridad:criticidad rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</ciberseguridad:criticidad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#computadora_usuario1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#computadora_usuario1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Computadora"/>
+        <ciberseguridad:criticidad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ciberseguridad:criticidad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#firewall_cisco -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#firewall_cisco">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Seguridad"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#inputs_debiles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#inputs_debiles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Inputs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#phishing_empresarial -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#phishing_empresarial">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Phishing"/>
+        <ciberseguridad:afecta rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#servidor_correo"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#sanitizar_inputs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#sanitizar_inputs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Sanitizacion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#servidor_correo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#servidor_correo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Servidor"/>
+        <ciberseguridad:criticidad rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ciberseguridad:criticidad>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#usuario_sn_capacitacion -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#usuario_sn_capacitacion">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Usuarios"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#validar_entradas -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#validar_entradas">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Validacion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#verificar_identidad -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#verificar_identidad">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Verificacion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#virus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#virus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Malware"/>
+        <ciberseguridad:nivelDeRiesgo rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ciberseguridad:nivelDeRiesgo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#2FA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#2FA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/usuariocc10/ontologies/2026/3/ciberseguridad#Autenticacion"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
